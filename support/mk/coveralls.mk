@@ -1,7 +1,7 @@
-COVERALLS ?= coveralls
+CODECLIMATE ?= ./node_modules/.bin/codeclimate
 
-submit-istanbul-lcov-to-coveralls:
-	cat $(ISTANBUL_LCOV_INFO_PATH) | $(COVERALLS)
+submit-istanbul-lcov-to-codeclimate:
+	cat $(ISTANBUL_LCOV_INFO_PATH) | $(CODECLIMATE)
 
 
-.PHONY: submit-istanbul-lcov-to-coveralls
+.PHONY: submit-istanbul-lcov-to-codeclimate

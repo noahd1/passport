@@ -25,11 +25,13 @@ include support/mk/jshint.mk
 # Reports
 # ==============================================================================
 include support/mk/coveralls.mk
+include support/mk/codeclimate.mk
 
 # ==============================================================================
 # Continuous Integration
 # ==============================================================================
 submit-cov-to-coveralls: submit-istanbul-lcov-to-coveralls
+submit-cov-to-codeclimate: submit-istanbul-lcov-to-codeclimate
 
 # Travis CI
 ci-travis: test test-cov
